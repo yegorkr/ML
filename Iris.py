@@ -93,7 +93,6 @@ for i in range (len(X_test)):
     temp.append(P(X_test.iloc[i][0], X_test.iloc[i][1], X_test.iloc[i][2], X_test.iloc[i][3]))
 print(acc / len(Y_test))
 df = pd.DataFrame(temp)
-df['ans'] = Y_test
 accc = 0
 ttemp = []
 for i in range (len(X_test)):
@@ -102,5 +101,6 @@ for i in range (len(X_test)):
     ttemp.append(PV(X_test.iloc[i][0], X_test.iloc[i][1], X_test.iloc[i][2], X_test.iloc[i][3]))
 print(accc / len(Y_test))
 ddf = pd.DataFrame(ttemp)
-df['ans1'] = ttemp
+df['1'] = ttemp
+df['ans'] = Y_test
 print(df)
